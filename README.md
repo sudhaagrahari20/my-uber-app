@@ -1,9 +1,8 @@
 # A Ride Booking Application 🚖
 
-A feature-rich, Uber-like application that connects riders with drivers seamlessly. Built with Spring Boot https://spring.io/projects/spring-boot.
+A feature-rich, Uber-like application that connects riders with drivers seamlessly. Built with [Spring Boot](https://spring.io/projects/spring-boot).
 
 ---
-
 
 ## 🛠️ Tech Stack
 ### Backend:
@@ -14,9 +13,7 @@ A feature-rich, Uber-like application that connects riders with drivers seamless
 - **Spring Security**: Authentication and role-based authorization.
 - **OpenAPI/Swagger**: API documentation.
 - **Spring Boot Actuator**: Application monitoring.
-- **Maven**:  Build and dependency management.
-
-
+- **Maven**: Build and dependency management.
 
 ---
 
@@ -41,6 +38,7 @@ A feature-rich, Uber-like application that connects riders with drivers seamless
 8. **Email Support**: Enable email notifications for actions like ride confirmations, payment receipts, etc.
 9. **Testing and Optimization**: Ensure the application is well-tested and optimized for performance and scalability.
 
+---
 
 ## Prerequisites
 
@@ -51,17 +49,46 @@ Ensure the following are installed on your system:
 - **PostgreSQL 13** or later
 - **Postman** (optional for API testing)
 
+---
 
+## 🔗 API Endpoints
 
-### 4. API Endpoints
+### Authentication
+| Endpoint                                   | Method | Description                        |
+|-------------------------------------------|--------|------------------------------------|
+| `/auth/signup`                             | POST   | Sign up a new user                |
+| `/auth/login`                              | POST   | Login user and get JWT            |
+| `/auth/refresh`                            | POST   | Refresh JWT token                 |
 
-| Endpoint                   | Method | Description                  |
-|----------------------------|--------|------------------------------|
-| `/api/users/signup`        | POST   | Sign up a new user           |
-| `/api/users/login`         | POST   | Login user and get JWT       |
-| `/api/rides/request`       | POST   | Request a ride               |
-| `/api/rides/{id}/accept`   | PUT    | Accept a ride                |
-| `/api/rides/{id}/start`    | PUT    | Start a ride                 |
-| `/api/payments/process`    | POST   | Process a payment            |
+### Driver Management
+| Endpoint                                   | Method | Description                        |
+|-------------------------------------------|--------|------------------------------------|
+| `/auth/onBoardNewDriver/{userId}`          | POST   | Onboard a new driver              |
 
-Test these endpoints using **Postman** or similar tools.
+### Rider Operations
+| Endpoint                                   | Method | Description                        |
+|-------------------------------------------|--------|------------------------------------|
+| `/riders/requestRide`                      | POST   | Request a ride                    |
+| `/riders/rateDriver`                       | POST   | Rate a driver                     |
+| `/riders/cancelRide/{rideId}`              | POST   | Cancel a ride                     |
+| `/riders/getMyRides`                       | GET    | Get all rides of a rider          |
+| `/riders/getMyProfile`                     | GET    | Get rider profile                 |
+
+### Driver Operations
+| Endpoint                                   | Method | Description                        |
+|-------------------------------------------|--------|------------------------------------|
+| `/drivers/startRide/{rideRequestId}`       | POST   | Start a ride                      |
+| `/drivers/rateRider`                       | POST   | Rate a rider                      |
+| `/drivers/endRide/{rideId}`                | POST   | End a ride                        |
+| `/drivers/cancelRide/{rideId}`             | POST   | Cancel a ride                     |
+| `/drivers/acceptRide/{rideRequestId}`      | POST   | Accept a ride request             |
+| `/drivers/getMyRides`                      | GET    | Get all rides of a driver         |
+| `/drivers/getMyProfile`                    | GET    | Get driver profile                |
+
+---
+
+## API Testing
+
+You can test these endpoints using tools like **Postman** or **cURL**. For a detailed understanding of the request body and response structure, refer to the [OpenAPI Specification](./api-docs).
+
+---
