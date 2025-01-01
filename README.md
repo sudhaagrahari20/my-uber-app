@@ -1,6 +1,6 @@
 # A Ride Booking Application 🚖
 
-A feature-rich, Uber-like application that connects riders with drivers seamlessly. Built with [Spring Boot](https://spring.io/projects/spring-boot).
+A feature-rich ride-booking application built with Spring Boot, offering seamless rider-driver connectivity, secure authentication, real-time updates, payment integration, and comprehensive API documentation for Uber-like functionality.
 
 ---
 
