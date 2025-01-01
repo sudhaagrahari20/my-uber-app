@@ -4,6 +4,7 @@ A feature-rich, Uber-like application that connects riders with drivers seamless
 
 ---
 
+
 ## 🛠️ Tech Stack
 ### Backend:
 - **Spring Boot**: Framework for building the backend
@@ -16,6 +17,7 @@ A feature-rich, Uber-like application that connects riders with drivers seamless
 - **Maven**: Build and dependency management.
 
 ---
+
 
 ## 📌 Features
 
@@ -40,6 +42,7 @@ A feature-rich, Uber-like application that connects riders with drivers seamless
 
 ---
 
+
 ## Prerequisites
 
 Ensure the following are installed on your system:
@@ -50,6 +53,7 @@ Ensure the following are installed on your system:
 - **Postman** (optional for API testing)
 
 ---
+
 
 ## 🔗 API Endpoints
 
