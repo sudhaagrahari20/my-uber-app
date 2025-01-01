@@ -93,6 +93,6 @@ Ensure the following are installed on your system:
 
 ## API Testing
 
-You can test these endpoints using tools like **Postman** or **cURL**. For a detailed understanding of the request body and response structure, refer to the [OpenAPI Specification](./api-docs).
+You can test these endpoints using tools like **Postman** or **cURL**.
 
 ---
